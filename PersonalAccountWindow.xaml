@@ -1,0 +1,56 @@
+﻿<Window x:Class="PencilApp.PersonalAccountWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PencilApp"
+        mc:Ignorable="d"
+        Title="PersonalAccountWindow" Height="1024" Width="1440"
+       IsVisibleChanged="Window_IsVisibleChanged"
+        Style="{StaticResource WindowStyle}" Icon="C:\Users\Оксана\Desktop\PencilStationery\Resources\logo.png">
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\Оксана\Desktop\PencilApp\Resources\fon.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="86*"/>
+            <RowDefinition Height="39*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="303*"/>
+            <ColumnDefinition Width="833*"/>
+            <ColumnDefinition Width="304*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Личный кабинет " Style="{StaticResource TextBlockStyle}" Grid.Column="1" VerticalAlignment="Bottom" Margin="0 0 0 60" Height="49" Width="290"  />
+        <Image Source="C:\Users\Оксана\Desktop\PencilStationery\Resources\logo.png"   Width="180"  Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center"/>
+
+        <Border  Grid.Row="1" Grid.Column="1" Style="{StaticResource BorderkStyle}" Padding="30" Height="368" Margin="67,0,66,0"   >
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="58*"></RowDefinition>
+                    <RowDefinition Height="63*"></RowDefinition>
+
+                    <RowDefinition Height="62*"></RowDefinition>
+                    <RowDefinition Height="78*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Content="Логин:" Grid.Column="0" Grid.Row="1"   Style="{StaticResource LabelStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,60,0"/>
+                <Label Content="Телефон:" Grid.Column="0" Grid.Row="2"  Style="{StaticResource LabelStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,60,0"/>
+                <Label x:Name="LoginLabel" Grid.Column="1" Style="{StaticResource LabelStyle}" Grid.Row="1"  VerticalAlignment="Center" HorizontalAlignment="Left" Margin="60,0,0,0"/>
+                <Label  x:Name="PhoneLabel" Grid.Column="1" Grid.Row="2" Style="{StaticResource LabelStyle}" VerticalAlignment="Center" HorizontalAlignment="Left"  Margin="60,0,0,0" />
+                <TextBox x:Name="LoginTextBox" Grid.Column="1" Style="{StaticResource TextboxStyle}" Grid.Row="1"  VerticalAlignment="Center" HorizontalAlignment="Left" Margin="60,0,0,0" Visibility="Hidden"/>
+                <TextBox  x:Name="PhoneTextBox" Grid.Column="1" Grid.Row="2" Style="{StaticResource TextboxStyle}" VerticalAlignment="Center" HorizontalAlignment="Left"  Margin="60,0,0,0"  Visibility="Hidden"/>
+               
+                <Button x:Name="BackButton" Grid.Column="1" Grid.Row="0" Content="Назад" BorderBrush="White" Background="White" FontFamily="Ink free" FontSize="20" HorizontalContentAlignment="Right" Margin="230,0,10,0" Click="BackButton_Click" />
+                 <Button  x:Name="EditButton"  Content="Изменить" Grid.Column="0" Grid.Row="3"  Style="{StaticResource ButtonStyle}" Click="EditButton_Click"/>
+                    <Button x:Name="SaveChangeButton"   Content="Сохранить" Grid.Column="0" Grid.Row="3"  Style="{StaticResource ButtonStyle}" Click="SaveChangeButton_Click" Visibility="Hidden"/>
+                    <Button  x:Name="ExitButton"  Content="Выйти" Grid.Column="1" Grid.Row="3"  Style="{StaticResource ButtonStyle}" Click="ExitButton_Click" />
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
+

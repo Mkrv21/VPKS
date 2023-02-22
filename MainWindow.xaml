@@ -1,0 +1,50 @@
+﻿<Window x:Class="PencilApp.MainWindow"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PencilApp"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="1024" Width="1440 "
+        
+        Style="{StaticResource WindowStyle}" Icon="C:\Users\Оксана\Desktop\PencilStationery\Resources\logo.png">
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\Оксана\Desktop\PencilApp\Resources\fon.jpg"/>
+    </Window.Background>
+
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="259*"/>
+            <RowDefinition Height="440*"/>
+            <RowDefinition Height="285*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="503*"/>
+            <ColumnDefinition Width="829*"/>
+            <ColumnDefinition Width="568*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Авторизация" Style="{StaticResource TextBlockStyle}" Grid.Column="1" VerticalAlignment="Center"   FontWeight="Bold" FontSize="40" Height="50" Width="232" />
+        <Image Source="C:\Users\Оксана\Desktop\PencilStationery\Resources\logo.png"   Width="180"  Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right"  Margin=" 0 0 70 0"/>
+
+        <Grid Margin="13,30,10,0" Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="122*"></RowDefinition>
+                <RowDefinition Height="128*"></RowDefinition>
+                <RowDefinition Height="169*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Content="Логин:" Style="{StaticResource LabelStyle}" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Arial Unicode MS" Height="50" Width="101"   />
+            <Label Content="Пароль:" Grid.Row="1" Style="{StaticResource LabelStyle}" VerticalAlignment="Center" HorizontalAlignment="Center" Height="51" Width="123" />
+            <TextBox x:Name="textBoxLogin" Grid.Column="1" Margin="5,0,0,0" Style="{StaticResource TextboxStyle}" TextChanged="textBoxLogin_TextChanged"    />
+            <PasswordBox  x:Name="passBox" Grid.Column="1" Grid.Row="1" Margin="5,0,0,0" Style="{StaticResource PassboxStyle}"   />
+            <Button  x:Name="registrationWindowButton"  Content="Регистрация" Grid.Column="0" Grid.Row="2"  Style="{StaticResource ButtonStyle}" Click="registrationWindowButton_Click" FontFamily="Ink Free" FontWeight="Bold" FontSize="24"  />
+            <Button  x:Name="authorizationButton"  Content="Войти" Grid.Column="1" Grid.Row="2"   Style="{StaticResource ButtonStyle}" Click="authorizationButton_Click" FontFamily="Ink Free" FontWeight="Bold" FontStyle="Normal" FontSize="24"   />
+        </Grid>
+
+    </Grid>
+</Window>
